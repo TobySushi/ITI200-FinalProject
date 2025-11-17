@@ -1,0 +1,42 @@
+ .bg-blue {
+            background-color: #1565C0 !important;
+        }
+        
+/*for viewGoals page, will cross out text after textbox is checked
+set input with strikethrough class ; set label to cb-label class
+*/
+.strikethrough:checked + .cb-label{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.article-container-wide {
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-img-top {
+    border-radius: 5%;
+    margin: 10px 0px 10px 0px;
+}
+
+.article-container img {
+    border-radius: 5%;
+}
+
+.center-card {
+    margin: 20px 0px 20px 0px;
+}
+
+.article-container {
+    padding: 5px;
+    margin: 5px;
+}
+
+.additional-articles {
+    margin: 20px 0px 20px 0px;
+}
+
+.form-container {
+    margin: 20px 0px 20px 0px;
+}

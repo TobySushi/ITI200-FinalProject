@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Habits Tracker</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="CSS/styles.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Habits Tracker</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="inputData.html">Input Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewGoals.html">View Goals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="greatTips.html">Great Tips</a>
+                        </li>
+                    </ul>
+                    <!-- Right-aligned login button with person icon -->
+                    <div class="d-flex ms-auto">
+                        <button class="btn btn-outline-light">
+                            <a class="nav-link" href="login.html"><i class="bi bi-person-circle"></i> Login</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Main section-Form -->
+         <div class="row">
+            <div class="col-3"></div>
+            <div class="form-container col-6">
+                <form id="habitsForm">
+                    <h2 class="mb-4">Help us understand you current habits</h2>
+                    <div class="mb-3">
+                        <label for="sleepHours" class="form-label">Avaerge hours of sleep per night<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="sleepHours" required placeholder="7">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sleepGoal" class="form-label">How many hours of sleep do you think you should be getting:<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="sleepGoal" required placeholder="8 or more">
+                    </div>
+                    <div class="mb-3">
+                        <label for="creditHours" class="form-label">How many credit hours are you enrolled in right now<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="creditHours" required placeholder="12">
+                        </div>
+                    <div class="mb-3">
+                        <label for="studyHours" class="form-label">How many hours do you study per week<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="studyHours" required placeholder="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="excerciseHours" class="form-label">How many hours do you exercise per week<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="excerciseHours" required placeholder="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="screenTime" class="form-label">If you checked you phones screen time(Andriod and Apple will tell you)what if you average screen time per day<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="screenTime" required placeholder="2">
+                    </div>
+                    <div class="mb-3">
+                        <label for="screenGoal" class="form-label">How many hours of screen time do you think you should be getting<span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="screenGoal" required placeholder="1 or less">
+                    </div>
+                    <div class="mb-3">
+                        <label for="studyGroupInterest" class="form-label">Would you be interested in joining a study group<span class="text-danger">*</span></label>
+                        <select class="form-select" id="studyGroupInterest">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="inputSubmitBTN">Submit</button>
+                </form>
+            </div>
+            <div class="col-3"></div>
+         </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        <!-- Custom JS -->
+        <script src="Javascrip/main.js"></script>
+    </body>
+</html>
