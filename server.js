@@ -80,7 +80,7 @@ app.delete("/api/viewGoals/delete/:id", (req, res) => {
 // route to save habits data to database
 app.post("/api/habits", async (req, res) => {
     try {
-        // get all the form data from request body
+        // get all the form data 
         const {
             user_name,
             sleep_hours,
@@ -108,7 +108,7 @@ app.post("/api/habits", async (req, res) => {
             ]
         );
 
-        // send back success message with the new record id
+        // send back success message 
         return res.json({ status: "success", id: result.rows[0].id });
     } catch (error) {
         console.error("Error saving data to habits:", error);
@@ -122,7 +122,7 @@ app.post("/api/habits/analyze", async (req, res) => {
     try {
         const habitsData = req.body;
 
-        // make sure we have the data we need
+        // make sure every required field is filled out
         if (!habitsData.user_name || !habitsData.sleep_hours) {
             return res.status(400).json({
                 error: "Missing required habit data"
@@ -136,7 +136,7 @@ app.post("/api/habits/analyze", async (req, res) => {
 
         console.log("Got response from OpenAI, sending to frontend");
 
-        // send the AI tips back to frontend
+        // send the AI response back to frontend
         res.json({
             success: true,
             tips: advice,
@@ -146,13 +146,12 @@ app.post("/api/habits/analyze", async (req, res) => {
     } catch (error) {
         console.error("Error in /api/habits/analyze:", error);
         res.status(500).json({
-            error: "Could not generate personalized advice. Please try again."
+            error: "Could not generate personalized advice."
         });
     }
 });
 
-// start the server
-const PORT = process.env.PORT || 80;
+const PORT = 80;
 app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}`);
+    console.log(`Server listening on port 80`);
 });
