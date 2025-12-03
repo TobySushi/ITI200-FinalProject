@@ -21,6 +21,15 @@ const pool = new Pool({
     port: 5432,
 });
 
+/*const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'postgres',
+    password:'toby',
+    port: 5432,
+});*/
+
+
 app.get("/api/viewGoals", (req, res) => {
 
     // retrieve goals from database based on userid
