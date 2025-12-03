@@ -14,10 +14,10 @@ app.use(bodyParser.json());
 
 // connect to database
 const pool = new Pool({
-    user: 'postgres',
+    user: 'primary',
     host: 'localhost',
-    database: 'postgres',
-    password:'toby',
+    database: 'ITI200',
+    password:'ITI200toby',
     port: 5432,
 });
 
