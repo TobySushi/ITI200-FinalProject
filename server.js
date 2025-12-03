@@ -157,7 +157,7 @@ app.post("/api/habits/analyze", async (req, res) => {
 // rss feeds
 app.get('/api/feed', async (req, res) => {
     try {
-        const feed = await parser.parseURL('https://www.bridgestorecovery.com/blog/feed/');
+        const feed = await parser.parseURL('lifehack.org/feed');
 
         const itemsWithThumbnails = feed.items.map(item => {
             const html = item['content:encoded'] || item.content || item.summary || '';
