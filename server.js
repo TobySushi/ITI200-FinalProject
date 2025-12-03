@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // connect to database
 const pool = new Pool({
     user: 'primary',
-    host: 'localhost',
+    host: '0.0.0.0',
     database: 'itidb',
     password:'hf7JmN2DpiCwmcb8r2yRXMs34LL4y8hR',
     port: 5432,
